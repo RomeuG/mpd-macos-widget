@@ -8,6 +8,10 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="mpd_whatsplaing_extension" customModuleProvider="target">
             <connections>
+                <outlet property="btnNext" destination="Ucn-vO-aam" id="tXe-Ow-vqn"/>
+                <outlet property="btnPlayPause" destination="Nde-eg-vZ4" id="JID-eO-iZK"/>
+                <outlet property="btnPrevious" destination="Vce-MX-UUW" id="FNc-Pw-G92"/>
+                <outlet property="previousButton" destination="Vce-MX-UUW" id="dNF-au-89B"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -33,7 +37,11 @@
                     <buttonCell key="cell" type="push" title="Previous" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8Bb-4o-GQn">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
+                        <connections>
+                            <action selector="btnPreviousAction:" target="-2" id="Xpy-vU-wCA"/>
+                        </connections>
                     </buttonCell>
+                    <accessibility identifier="aaa"/>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nde-eg-vZ4">
                     <rect key="frame" x="126" y="237" width="69" height="32"/>

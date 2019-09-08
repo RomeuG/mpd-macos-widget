@@ -11,6 +11,10 @@ import NotificationCenter
 
 class TodayViewController: NSViewController, NCWidgetProviding {
 
+    @IBOutlet weak var btnPlayPause: NSButton!
+    @IBOutlet weak var btnNext: NSButton!
+    @IBOutlet weak var btnPrevious: NSButton!
+    
     override var nibName: NSNib.Name? {
         return NSNib.Name("TodayViewController")
     }
@@ -22,4 +26,12 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         completionHandler(.noData)
     }
 
+    @IBAction func btnPreviousAction(_ sender: Any) {
+        print("test")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
