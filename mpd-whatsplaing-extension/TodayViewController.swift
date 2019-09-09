@@ -15,6 +15,9 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     @IBOutlet weak var btnNext: NSButton!
     @IBOutlet weak var btnPrevious: NSButton!
     
+    let ipAddress: String = "127.0.0.1"
+    let defaultPort: String = "6600"
+    
     override var nibName: NSNib.Name? {
         return NSNib.Name("TodayViewController")
     }
@@ -32,10 +35,13 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.view.wantsLayer = true
         
         let v: NSView = NSView(frame: NSMakeRect(0, 0, 200, 200))
         v.layer?.backgroundColor = NSColor.yellow.cgColor
-        self.view.addSubview(v)
+        self.view.addSubview(v, positioned: .above, relativeTo: nil)
+        
+        print("test")
         //self.window?.contentView?.addSubview(v)
     }
 }
