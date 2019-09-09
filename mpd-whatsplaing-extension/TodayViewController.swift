@@ -33,5 +33,9 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let v: NSView = NSView(frame: NSMakeRect(0, 0, 200, 200))
+        v.layer?.backgroundColor = NSColor.yellow.cgColor
+        self.view.addSubview(v)
+        //self.window?.contentView?.addSubview(v)
     }
 }
