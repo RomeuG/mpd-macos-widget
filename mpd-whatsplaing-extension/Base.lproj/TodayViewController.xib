@@ -8,6 +8,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="mpd_whatsplaing_extension" customModuleProvider="target">
             <connections>
+                <outlet property="btnNext" destination="Mpv-mC-W8l" id="m9R-hJ-pa0"/>
+                <outlet property="btnPlayPause" destination="Mr9-M7-BL9" id="T4R-3b-oIA"/>
+                <outlet property="btnPrevious" destination="uNh-MZ-UHN" id="QYW-Je-cwP"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -29,6 +32,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="btnPreviousAction:" target="-2" id="d1Q-iu-51X"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mpv-mC-W8l">
                     <rect key="frame" x="212" y="23" width="69" height="32"/>

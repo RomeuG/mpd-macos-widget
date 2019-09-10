@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94B34551908E0054861B4347 /* Pods_mpd_whatsplaing_extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA79BB5E2BEEF70EF220BF6 /* Pods_mpd_whatsplaing_extension.framework */; };
 		A3BC63DD2325B56D00B12D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BC63DC2325B56D00B12D86 /* AppDelegate.swift */; };
 		A3BC63DF2325B56D00B12D86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BC63DE2325B56D00B12D86 /* ViewController.swift */; };
 		A3BC63E12325B56D00B12D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BC63E02325B56D00B12D86 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 		A3BC63F92325B66700B12D86 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BC63F72325B66700B12D86 /* TodayViewController.xib */; };
 		A3BC63FD2325B66700B12D86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3BC63FB2325B66700B12D86 /* InfoPlist.strings */; };
 		A3BC64012325B66700B12D86 /* mpd-whatsplaing-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3BC63F02325B66700B12D86 /* mpd-whatsplaing-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B4940E5F66CE12FD4530FE5F /* Pods_mpd_whatsplaying.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC33BC39C8B3B10E5C009704 /* Pods_mpd_whatsplaying.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C09E43486D17352D2A4FE70 /* Pods-mpd-whatsplaying.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpd-whatsplaying.debug.xcconfig"; path = "Target Support Files/Pods-mpd-whatsplaying/Pods-mpd-whatsplaying.debug.xcconfig"; sourceTree = "<group>"; };
+		8319101418DB9AA26ABFB53C /* Pods-mpd-whatsplaying.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpd-whatsplaying.release.xcconfig"; path = "Target Support Files/Pods-mpd-whatsplaying/Pods-mpd-whatsplaying.release.xcconfig"; sourceTree = "<group>"; };
+		871B553F5F2219C81D13D279 /* Pods-mpd-whatsplaing-extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpd-whatsplaing-extension.debug.xcconfig"; path = "Target Support Files/Pods-mpd-whatsplaing-extension/Pods-mpd-whatsplaing-extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A3BC63D92325B56D00B12D86 /* mpd-whatsplaying.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpd-whatsplaying.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BC63DC2325B56D00B12D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BC63DE2325B56D00B12D86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +62,9 @@
 		A3BC63FA2325B66700B12D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3BC63FC2325B66700B12D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3BC63FE2325B66700B12D86 /* mpd_whatsplaing_extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mpd_whatsplaing_extension.entitlements; sourceTree = "<group>"; };
+		AC33BC39C8B3B10E5C009704 /* Pods_mpd_whatsplaying.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mpd_whatsplaying.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA79BB5E2BEEF70EF220BF6 /* Pods_mpd_whatsplaing_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mpd_whatsplaing_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A20CD44A25A7F5E0351417 /* Pods-mpd-whatsplaing-extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpd-whatsplaing-extension.release.xcconfig"; path = "Target Support Files/Pods-mpd-whatsplaing-extension/Pods-mpd-whatsplaing-extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4940E5F66CE12FD4530FE5F /* Pods_mpd_whatsplaying.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +81,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3BC63F32325B66700B12D86 /* NotificationCenter.framework in Frameworks */,
+				94B34551908E0054861B4347 /* Pods_mpd_whatsplaing_extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68FBFDCDAE661E357833AC52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				871B553F5F2219C81D13D279 /* Pods-mpd-whatsplaing-extension.debug.xcconfig */,
+				F5A20CD44A25A7F5E0351417 /* Pods-mpd-whatsplaing-extension.release.xcconfig */,
+				0C09E43486D17352D2A4FE70 /* Pods-mpd-whatsplaying.debug.xcconfig */,
+				8319101418DB9AA26ABFB53C /* Pods-mpd-whatsplaying.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A3BC63D02325B56D00B12D86 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,7 @@
 				A3BC63F42325B66700B12D86 /* mpd-whatsplaing-extension */,
 				A3BC63F12325B66700B12D86 /* Frameworks */,
 				A3BC63DA2325B56D00B12D86 /* Products */,
+				68FBFDCDAE661E357833AC52 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				A3BC63F22325B66700B12D86 /* NotificationCenter.framework */,
+				BFA79BB5E2BEEF70EF220BF6 /* Pods_mpd_whatsplaing_extension.framework */,
+				AC33BC39C8B3B10E5C009704 /* Pods_mpd_whatsplaying.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -137,10 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3BC63E92325B56D00B12D86 /* Build configuration list for PBXNativeTarget "mpd-whatsplaying" */;
 			buildPhases = (
+				FB383F68B35917AB54BD2FED /* [CP] Check Pods Manifest.lock */,
 				A3BC63D52325B56D00B12D86 /* Sources */,
 				A3BC63D62325B56D00B12D86 /* Frameworks */,
 				A3BC63D72325B56D00B12D86 /* Resources */,
 				A3BC64052325B66700B12D86 /* Embed App Extensions */,
+				77D28FE78E71EF3E3E29A4AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +183,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3BC64022325B66700B12D86 /* Build configuration list for PBXNativeTarget "mpd-whatsplaing-extension" */;
 			buildPhases = (
+				32729E6EBB746A4F5AD77266 /* [CP] Check Pods Manifest.lock */,
 				A3BC63EC2325B66700B12D86 /* Sources */,
 				A3BC63ED2325B66700B12D86 /* Frameworks */,
 				A3BC63EE2325B66700B12D86 /* Resources */,
@@ -226,6 +254,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32729E6EBB746A4F5AD77266 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mpd-whatsplaing-extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77D28FE78E71EF3E3E29A4AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mpd-whatsplaying/Pods-mpd-whatsplaying-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mpd-whatsplaying/Pods-mpd-whatsplaying-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mpd-whatsplaying/Pods-mpd-whatsplaying-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB383F68B35917AB54BD2FED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mpd-whatsplaying-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3BC63D52325B56D00B12D86 /* Sources */ = {
@@ -398,6 +490,7 @@
 		};
 		A3BC63EA2325B56D00B12D86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C09E43486D17352D2A4FE70 /* Pods-mpd-whatsplaying.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -417,6 +510,7 @@
 		};
 		A3BC63EB2325B56D00B12D86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8319101418DB9AA26ABFB53C /* Pods-mpd-whatsplaying.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -436,6 +530,7 @@
 		};
 		A3BC64032325B66700B12D86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 871B553F5F2219C81D13D279 /* Pods-mpd-whatsplaing-extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "mpd-whatsplaing-extension/mpd_whatsplaing_extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +550,7 @@
 		};
 		A3BC64042325B66700B12D86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5A20CD44A25A7F5E0351417 /* Pods-mpd-whatsplaing-extension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "mpd-whatsplaing-extension/mpd_whatsplaing_extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;

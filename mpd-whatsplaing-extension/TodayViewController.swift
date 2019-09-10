@@ -8,6 +8,7 @@
 
 import Cocoa
 import NotificationCenter
+import SwiftSocket
 
 class TodayViewController: NSViewController, NCWidgetProviding {
 
@@ -35,13 +36,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.wantsLayer = true
         
-        let v: NSView = NSView(frame: NSMakeRect(0, 0, 200, 200))
-        v.layer?.backgroundColor = NSColor.yellow.cgColor
-        self.view.addSubview(v, positioned: .above, relativeTo: nil)
-        
-        print("test")
-        //self.window?.contentView?.addSubview(v)
+        //let client = TCPClient(address: "www.apple.com", port: 80)
     }
 }
