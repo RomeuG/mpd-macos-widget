@@ -33,8 +33,18 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     }
     
     @IBAction func btnPreviousAction(_ sender: Any) {
-        print("test")
-        //let result = tcpClient?.send(data: data)
+        let result = tcpClient?.send(data: "previous".data(using: .utf8)!)
+        print("btnPrevious result: \(String(describing: result))")
+    }
+    
+    @IBAction func btnPlayAction(_ sender: Any) {
+        let result = tcpClient?.send(data: "pause".data(using: .utf8)!)
+        print("btnPlay result: \(String(describing: result))")
+    }
+    
+    @IBAction func btnNextAction(_ sender: Any) {
+        let result = tcpClient?.send(data: "next".data(using: .utf8)!)
+        print("btnNext result: \(String(describing: result))")
     }
     
     override func viewDidLoad() {
