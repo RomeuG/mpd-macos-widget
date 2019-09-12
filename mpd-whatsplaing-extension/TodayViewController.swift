@@ -57,6 +57,10 @@ class TodayViewController: NSViewController, NCWidgetProviding {
             print("Success!")
         case .failure(let error):
             print("Failure: \(error.localizedDescription)")
+            
+            btnPlayPause.isEnabled = false
+            btnPrevious.isEnabled = false
+            btnNext.isEnabled = false
         case .none:
             print("None!")
         }
