@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -96,7 +96,6 @@
 				0C09E43486D17352D2A4FE70 /* Pods-mpd-whatsplaying.debug.xcconfig */,
 				8319101418DB9AA26ABFB53C /* Pods-mpd-whatsplaying.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

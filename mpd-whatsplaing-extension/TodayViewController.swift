@@ -18,7 +18,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     
     var tcpClient: TCPClient? = nil;
     
-    let ipAddress: String = "127.0.0.1"
+    let ipAddress: String = "localhost"
     let defaultPort: Int32 = 6600
     
     override var nibName: NSNib.Name? {
