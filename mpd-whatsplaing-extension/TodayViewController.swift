@@ -33,18 +33,45 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     }
     
     @IBAction func btnPreviousAction(_ sender: Any) {
-        let result = tcpClient?.send(data: "previous".data(using: .utf8)!)
-        print("btnPrevious result: \(String(describing: result))")
+        switch tcpClient?.send(data: "previous".data(using: .utf8)!) {
+        case .success:
+            guard let response = tcpClient?.read(1024*10) else { return }
+            let response_str: String = String(bytes: response, encoding: .utf8) ?? ""
+            
+            print("btnPreviousAction response: \(response_str)")
+        case .failure(let error):
+            print("btnPreviousAction read failure: \(error.localizedDescription)")
+        case .none:
+            print("Unknown error!")
+        }
     }
     
     @IBAction func btnPlayAction(_ sender: Any) {
-        let result = tcpClient?.send(data: "pause".data(using: .utf8)!)
-        print("btnPlay result: \(String(describing: result))")
+        switch tcpClient?.send(data: "pause".data(using: .utf8)!) {
+        case .success:
+            let response = (tcpClient?.read(1024*10))!
+            let response_str: String = String(bytes: response, encoding: .utf8) ?? ""
+            
+            print("btnPlayAction response: \(response_str)")
+        case .failure(let error):
+            print("btnPlayAction read failure: \(error.localizedDescription)")
+        case .none:
+            print("Unknown error!")
+        }
     }
     
     @IBAction func btnNextAction(_ sender: Any) {
-        let result = tcpClient?.send(data: "next".data(using: .utf8)!)
-        print("btnNext result: \(String(describing: result))")
+        switch tcpClient?.send(data: "next".data(using: .utf8)!) {
+        case .success:
+            guard let response = tcpClient?.read(1024*10) else { return }
+            let response_str: String = String(bytes: response, encoding: .utf8) ?? ""
+            
+            print("btnNextAction response: \(response_str)")
+        case .failure(let error):
+            print("btnNextAction read failure: \(error.localizedDescription)")
+        case .none:
+            print("Unknown error!")
+        }
     }
     
     override func viewDidLoad() {
@@ -55,6 +82,12 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         switch tcpClient?.connect(timeout: 10) {
         case .success:
             print("Success!")
+            
+            guard let response = tcpClient?.read(1024*10) else { return }
+            let response_str: String = String(bytes: response, encoding: .utf8) ?? ""
+            
+            print("Initial connection response: \(response_str)")
+            
         case .failure(let error):
             print("Failure: \(error.localizedDescription)")
             
