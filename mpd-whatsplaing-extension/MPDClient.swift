@@ -15,9 +15,6 @@ class MPDClient {
     private let TIMEOUT: Int = 4
     private let DATALEN: Int = 1024
     
-    let ipAddress: String = "localhost"
-
-    
     init(ipAddress: String, port: Int) {
         self.client = TCPClient(address: ipAddress, port: Int32(port))
     }

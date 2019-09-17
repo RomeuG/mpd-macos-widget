@@ -16,10 +16,10 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     @IBOutlet weak var btnNext: NSButton!
     @IBOutlet weak var btnPrevious: NSButton!
     
-    var tcpClient: TCPClient? = nil;
+    var mpdClient: MPDClient? = nil
     
     let ipAddress: String = "localhost"
-    let defaultPort: Int32 = 6600
+    let defaultPort: Int = 6600
     
     override var nibName: NSNib.Name? {
         return NSNib.Name("TodayViewController")
@@ -33,69 +33,20 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     }
     
     @IBAction func btnPreviousAction(_ sender: Any) {
-        switch tcpClient?.send(data: "previous".data(using: .utf8)!) {
-        case .success:
-            guard let response = tcpClient?.read(1024*10) else { return }
-            let response_str: String = String(bytes: response, encoding: .utf8) ?? ""
-            
-            print("btnPreviousAction response: \(response_str)")
-        case .failure(let error):
-            print("btnPreviousAction read failure: \(error.localizedDescription)")
-        case .none:
-            print("Unknown error!")
-        }
+
     }
     
     @IBAction func btnPlayAction(_ sender: Any) {
-        switch tcpClient?.send(data: "pause".data(using: .utf8)!) {
-        case .success:
-            let response = (tcpClient?.read(1024*10))!
-            let response_str: String = String(bytes: response, encoding: .utf8) ?? ""
-            
-            print("btnPlayAction response: \(response_str)")
-        case .failure(let error):
-            print("btnPlayAction read failure: \(error.localizedDescription)")
-        case .none:
-            print("Unknown error!")
-        }
+
     }
     
     @IBAction func btnNextAction(_ sender: Any) {
-        switch tcpClient?.send(data: "next".data(using: .utf8)!) {
-        case .success:
-            guard let response = tcpClient?.read(1024*10) else { return }
-            let response_str: String = String(bytes: response, encoding: .utf8) ?? ""
-            
-            print("btnNextAction response: \(response_str)")
-        case .failure(let error):
-            print("btnNextAction read failure: \(error.localizedDescription)")
-        case .none:
-            print("Unknown error!")
-        }
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tcpClient = TCPClient(address: ipAddress, port: defaultPort)
-        
-        switch tcpClient?.connect(timeout: 10) {
-        case .success:
-            print("Success!")
-            
-            guard let response = tcpClient?.read(1024*10) else { return }
-            let response_str: String = String(bytes: response, encoding: .utf8) ?? ""
-            
-            print("Initial connection response: \(response_str)")
-            
-        case .failure(let error):
-            print("Failure: \(error.localizedDescription)")
-            
-            btnPlayPause.isEnabled = false
-            btnPrevious.isEnabled = false
-            btnNext.isEnabled = false
-        case .none:
-            print("None!")
-        }
+        self.mpdClient = MPDClient(ipAddress: ipAddress, port: defaultPort)
     }
 }
