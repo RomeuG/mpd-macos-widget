@@ -80,4 +80,12 @@ class MPDClient {
             }
         }
     }
+    
+    public func playPrevious() {
+        self.sendCommand(command: "previous", resultHandler: {(result: String?) in })
+    }
+    
+    public func playNext() {
+        self.sendCommand(command: "next", resultHandler: {(result: String?) in })
+    }
 }

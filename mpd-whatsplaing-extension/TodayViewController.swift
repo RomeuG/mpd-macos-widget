@@ -33,7 +33,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     }
     
     @IBAction func btnPreviousAction(_ sender: Any) {
-
+        self.mpdClient?.playPrevious()
     }
     
     @IBAction func btnPlayAction(_ sender: Any) {
@@ -41,7 +41,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     }
     
     @IBAction func btnNextAction(_ sender: Any) {
-
+        self.mpdClient?.playNext()
     }
     
     override func viewDidLoad() {
