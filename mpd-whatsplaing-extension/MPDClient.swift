@@ -32,6 +32,7 @@ class MPDClient {
                 //                        return true
                 //                    }
             } else {
+                // return true to send command anyways
                 return true
             }
             
@@ -56,7 +57,7 @@ class MPDClient {
                 // mpd wants \n terminating command
                 switch self.client.send(string: "\(command)\n") {
                 case .success:
-                    print("sendCommand :: success")
+                    print("MPDClient :: sendCommand :: success")
                     // read as long as the response is not finished
                     while true {
                         if let responseData = self.client.read(self.DATALEN) {
@@ -72,7 +73,7 @@ class MPDClient {
                     }
                     
                 case .failure(let error):
-                    print("sendCommand :: failure - \(error.localizedDescription)")
+                    print("MPDClient :: sendCommand :: failure - \(error.localizedDescription)")
                     
                 default: break
                 }
