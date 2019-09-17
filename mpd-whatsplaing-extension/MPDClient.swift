@@ -21,19 +21,24 @@ class MPDClient {
     
     public func connect() -> Bool {
         switch self.client.connect(timeout: self.TIMEOUT) {
-            case .success:
-                if let resultData = self.client.read(self.DATALEN) {
-                    return true
-//                    let result = String.init(bytes: resultData, encoding: String.Encoding.utf8)
-//
-//                    if let version = self.stripResult(result: result!, part: 2) {
-//                        self.version = version
-//                        print("Connection open: \(version)")
-//                        return true
-//                    }
-                }
-
-            default: break
+        case .success:
+            if let resultData = self.client.read(self.DATALEN) {
+                let result = String.init(bytes: resultData, encoding: String.Encoding.utf8)
+                return true
+                //
+                //                    if let version = self.stripResult(result: result!, part: 2) {
+                //                        self.version = version
+                //                        print("Connection open: \(version)")
+                //                        return true
+                //                    }
+            } else {
+                return true
+            }
+            
+        case .failure(let error):
+            print("MPDClient :: connect failure - \(error.localizedDescription)")
+            
+        default: break
         }
         
         return false
@@ -46,11 +51,12 @@ class MPDClient {
     private func sendCommand(command: String, resultHandler:@escaping (String?) -> Void) {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
             var response: String = ""
-
+            
             if self.connect() == true {
                 // mpd wants \n terminating command
                 switch self.client.send(string: "\(command)\n") {
                 case .success:
+                    print("sendCommand :: success")
                     // read as long as the response is not finished
                     while true {
                         if let responseData = self.client.read(self.DATALEN) {
@@ -64,10 +70,16 @@ class MPDClient {
                             }
                         }
                     }
+                    
+                case .failure(let error):
+                    print("sendCommand :: failure - \(error.localizedDescription)")
+                    
                 default: break
                 }
-
+                
                 self.disconnect()
+            } else {
+                print("sendCommand :: client.connect() failure")
             }
             
             DispatchQueue.main.async {
