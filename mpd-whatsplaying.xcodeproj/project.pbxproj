@@ -17,6 +17,7 @@
 		A3BC63F92325B66700B12D86 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BC63F72325B66700B12D86 /* TodayViewController.xib */; };
 		A3BC63FD2325B66700B12D86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3BC63FB2325B66700B12D86 /* InfoPlist.strings */; };
 		A3BC64012325B66700B12D86 /* mpd-whatsplaing-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3BC63F02325B66700B12D86 /* mpd-whatsplaing-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A3F7D8252331968700F56A3C /* MPDClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7D8242331968700F56A3C /* MPDClient.swift */; };
 		B4940E5F66CE12FD4530FE5F /* Pods_mpd_whatsplaying.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC33BC39C8B3B10E5C009704 /* Pods_mpd_whatsplaying.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		A3BC63FA2325B66700B12D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3BC63FC2325B66700B12D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3BC63FE2325B66700B12D86 /* mpd_whatsplaing_extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mpd_whatsplaing_extension.entitlements; sourceTree = "<group>"; };
+		A3F7D8242331968700F56A3C /* MPDClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPDClient.swift; sourceTree = "<group>"; };
 		AC33BC39C8B3B10E5C009704 /* Pods_mpd_whatsplaying.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mpd_whatsplaying.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA79BB5E2BEEF70EF220BF6 /* Pods_mpd_whatsplaing_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mpd_whatsplaing_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A20CD44A25A7F5E0351417 /* Pods-mpd-whatsplaing-extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpd-whatsplaing-extension.release.xcconfig"; path = "Target Support Files/Pods-mpd-whatsplaing-extension/Pods-mpd-whatsplaing-extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				A3BC63FA2325B66700B12D86 /* Info.plist */,
 				A3BC63FB2325B66700B12D86 /* InfoPlist.strings */,
 				A3BC63FE2325B66700B12D86 /* mpd_whatsplaing_extension.entitlements */,
+				A3F7D8242331968700F56A3C /* MPDClient.swift */,
 			);
 			path = "mpd-whatsplaing-extension";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F7D8252331968700F56A3C /* MPDClient.swift in Sources */,
 				A3BC63F62325B66700B12D86 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
