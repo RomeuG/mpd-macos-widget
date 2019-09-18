@@ -105,4 +105,8 @@ class MPDClient {
     public func playNext() {
         self.sendCommand(command: "next", resultHandler: {(result: String?) in })
     }
+    
+    public func playPause() {
+        self.sendCommand(command: "pause", resultHandler: {(result: String?) in })
+    }
 }
