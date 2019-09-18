@@ -37,7 +37,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     }
     
     @IBAction func btnPlayAction(_ sender: Any) {
-
+        self.mpdClient?.getStatus()
     }
     
     @IBAction func btnNextAction(_ sender: Any) {
