@@ -11,6 +11,7 @@ import SwiftSocket
 
 class MPDClient {
     private let client: TCPClient
+    private var version: String = ""
     
     private let TIMEOUT: Int = 4
     private let DATALEN: Int = 1024
@@ -19,20 +20,23 @@ class MPDClient {
         self.client = TCPClient(address: ipAddress, port: Int32(port))
     }
     
+    private func stripResult(result: String, part: Int) -> String? {
+        let stripped = result.split(separator: " ").map(String.init)[part]
+        return String(stripped.dropLast())
+    }
+    
     public func connect() -> Bool {
         switch self.client.connect(timeout: self.TIMEOUT) {
         case .success:
             if let resultData = self.client.read(self.DATALEN) {
                 let result = String.init(bytes: resultData, encoding: String.Encoding.utf8)
-                return true
-                //
-                //                    if let version = self.stripResult(result: result!, part: 2) {
-                //                        self.version = version
-                //                        print("Connection open: \(version)")
-                //                        return true
-                //                    }
+                if let version = self.stripResult(result: result!, part: 2) {
+                    self.version = version
+                    print("Connection open: \(version)")
+                    return true
+                }
             } else {
-                // return true to send command anyways
+                // if version is not returned
                 return true
             }
             
