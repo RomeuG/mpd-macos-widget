@@ -9,35 +9,7 @@
 import Foundation
 import SwiftSocket
 
-class MPDClient {
-    
-    struct status {
-        var _volume: Int
-        var _repeat: Bool
-        var _random: Bool
-        var _single: Bool
-        var _consume: Bool
-        var _playlistVersion: UInt32
-        var _playlistLength: Int
-        var _mixrampdb: Int
-        var _state: String // TODO use enum
-        var _song: Int
-        var _songid: Int
-        var _time: String
-        var _elapsed: String
-        var _bitrate: Int
-        var _duration: String
-        var _audio: String
-        var _nextsong: Int
-        var _nextsongid: Int
-        
-        func getVolume() -> Int {
-            return self._volume;
-        }
-        
-        // TODO
-    }
-    
+class MPDClient {    
     private let client: TCPClient
     private var version: String = ""
     
@@ -70,8 +42,6 @@ class MPDClient {
             
         case .failure(let error):
             print("MPDClient :: connect failure - \(error.localizedDescription)")
-            
-        default: break
         }
         
         return false
@@ -106,8 +76,6 @@ class MPDClient {
                     
                 case .failure(let error):
                     print("MPDClient :: sendCommand :: failure - \(error.localizedDescription)")
-                    
-                default: break
                 }
                 
                 self.disconnect()
@@ -124,15 +92,6 @@ class MPDClient {
                 }
             }
         }
-    }
-    
-    public func getStatus() {
-        self.sendCommand(command: "status", resultHandler: {(result: String?) in
-            if result != nil {
-                let statusList = result?.split(separator: "\n").map(String.init)
-                dump(statusList)
-            }
-        })
     }
     
     public func playPrevious() {

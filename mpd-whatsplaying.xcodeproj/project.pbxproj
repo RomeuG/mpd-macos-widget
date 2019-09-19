@@ -16,7 +16,7 @@
 		A3BC63F62325B66700B12D86 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BC63F52325B66700B12D86 /* TodayViewController.swift */; };
 		A3BC63F92325B66700B12D86 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BC63F72325B66700B12D86 /* TodayViewController.xib */; };
 		A3BC63FD2325B66700B12D86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3BC63FB2325B66700B12D86 /* InfoPlist.strings */; };
-		A3BC64012325B66700B12D86 /* mpd-whatsplaing-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3BC63F02325B66700B12D86 /* mpd-whatsplaing-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A3BC64012325B66700B12D86 /* mpd-whatsplaying-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3BC63F02325B66700B12D86 /* mpd-whatsplaying-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A3F7D8252331968700F56A3C /* MPDClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7D8242331968700F56A3C /* MPDClient.swift */; };
 		B4940E5F66CE12FD4530FE5F /* Pods_mpd_whatsplaying.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC33BC39C8B3B10E5C009704 /* Pods_mpd_whatsplaying.framework */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A3BC64012325B66700B12D86 /* mpd-whatsplaing-extension.appex in Embed App Extensions */,
+				A3BC64012325B66700B12D86 /* mpd-whatsplaying-extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +56,7 @@
 		A3BC63E32325B56D00B12D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3BC63E52325B56D00B12D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3BC63E62325B56D00B12D86 /* mpd_whatsplaying.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mpd_whatsplaying.entitlements; sourceTree = "<group>"; };
-		A3BC63F02325B66700B12D86 /* mpd-whatsplaing-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "mpd-whatsplaing-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3BC63F02325B66700B12D86 /* mpd-whatsplaying-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "mpd-whatsplaying-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BC63F22325B66700B12D86 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A3BC63F52325B66700B12D86 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A3BC63F82325B66700B12D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A3BC63D92325B56D00B12D86 /* mpd-whatsplaying.app */,
-				A3BC63F02325B66700B12D86 /* mpd-whatsplaing-extension.appex */,
+				A3BC63F02325B66700B12D86 /* mpd-whatsplaying-extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,9 +181,9 @@
 			productReference = A3BC63D92325B56D00B12D86 /* mpd-whatsplaying.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A3BC63EF2325B66700B12D86 /* mpd-whatsplaing-extension */ = {
+		A3BC63EF2325B66700B12D86 /* mpd-whatsplaying-extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3BC64022325B66700B12D86 /* Build configuration list for PBXNativeTarget "mpd-whatsplaing-extension" */;
+			buildConfigurationList = A3BC64022325B66700B12D86 /* Build configuration list for PBXNativeTarget "mpd-whatsplaying-extension" */;
 			buildPhases = (
 				32729E6EBB746A4F5AD77266 /* [CP] Check Pods Manifest.lock */,
 				A3BC63EC2325B66700B12D86 /* Sources */,
@@ -194,9 +194,9 @@
 			);
 			dependencies = (
 			);
-			name = "mpd-whatsplaing-extension";
+			name = "mpd-whatsplaying-extension";
 			productName = "mpd-whatsplaing-extension";
-			productReference = A3BC63F02325B66700B12D86 /* mpd-whatsplaing-extension.appex */;
+			productReference = A3BC63F02325B66700B12D86 /* mpd-whatsplaying-extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 			projectRoot = "";
 			targets = (
 				A3BC63D82325B56D00B12D86 /* mpd-whatsplaying */,
-				A3BC63EF2325B66700B12D86 /* mpd-whatsplaing-extension */,
+				A3BC63EF2325B66700B12D86 /* mpd-whatsplaying-extension */,
 			);
 		};
 /* End PBXProject section */
@@ -345,7 +345,7 @@
 /* Begin PBXTargetDependency section */
 		A3BC64002325B66700B12D86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A3BC63EF2325B66700B12D86 /* mpd-whatsplaing-extension */;
+			target = A3BC63EF2325B66700B12D86 /* mpd-whatsplaying-extension */;
 			targetProxy = A3BC63FF2325B66700B12D86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -536,6 +536,7 @@
 			baseConfigurationReference = 871B553F5F2219C81D13D279 /* Pods-mpd-whatsplaing-extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "mpd-whatsplaing-extension/mpd_whatsplaing_extension.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "mpd-whatsplaing-extension/Info.plist";
@@ -544,7 +545,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.romeug.mpd-whatsplaying.mpd-whatsplaing-extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romeug.mpd-whatsplaying.mpd-whatsplaying-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -556,6 +557,7 @@
 			baseConfigurationReference = F5A20CD44A25A7F5E0351417 /* Pods-mpd-whatsplaing-extension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "mpd-whatsplaing-extension/mpd_whatsplaing_extension.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "mpd-whatsplaing-extension/Info.plist";
@@ -564,7 +566,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.romeug.mpd-whatsplaying.mpd-whatsplaing-extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romeug.mpd-whatsplaying.mpd-whatsplaying-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -592,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3BC64022325B66700B12D86 /* Build configuration list for PBXNativeTarget "mpd-whatsplaing-extension" */ = {
+		A3BC64022325B66700B12D86 /* Build configuration list for PBXNativeTarget "mpd-whatsplaying-extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A3BC64032325B66700B12D86 /* Debug */,
